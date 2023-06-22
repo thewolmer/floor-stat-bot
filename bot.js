@@ -12,7 +12,7 @@ const bot = new Client({
 });
 
 const contractAddress = process.env.CONTRACT;
-const updateInterval = 10000; 
+const updateInterval = 60000; 
 const apiEndpoint = process.env.API_ENDPOINT; 
 const serverIds = process.env.SERVER_IDS.split(','); 
 
