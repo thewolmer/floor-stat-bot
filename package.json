@@ -1,17 +1,33 @@
 {
-  "name": "floor-price-stat-botr",
-  "version": "1.0.0",
+  "name": "floor-price-bot",
+  "version": "0.0.1",
   "description": "",
-   "scripts": {
-    "dev": "nodemon bot.js",
-    "start": "node bot.js"
+  "main": "src/bot.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc && tsc-alias",
+    "start": "npm run build && node dist/bot.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "@types/node": "^20.4.5",
     "axios": "^1.4.0",
     "discord.js": "^14.11.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1",
+    "tsc-alias": "^1.8.7",
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.46.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.1"
   }
 }
