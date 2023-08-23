@@ -1,10 +1,10 @@
 # NFT Floor Price Stat Bot
 
-The NFT Floor Price Stat Bot is a Discord bot that provides real-time floor price statistics for a specific NFT collection. It updates the nickname of a specified user in your Discord server with the current floor price of the chosen NFT collection from OpenSea.
+The NFT Floor Price Stat Bot is a Discord bot that provides real-time floor price statistics for a specific NFT collection. It updates its nickname in your Discord server with the current floor price of the chosen NFT collection from OpenSea.
 
 ## Features
 
-- Updates the nickname of a specified user with the floor price of the chosen NFT collection.
+- Updates the bot's nickname with the floor price of the chosen NFT collection.
 - Real-time floor price data fetched from OpenSea using Axios.
 - Built using Discord.js for seamless integration with Discord servers.
 - Written in TypeScript for improved code maintainability and type safety.
@@ -62,7 +62,7 @@ Start the server
   npm run start
 ```
 
-The bot will now update the specified user's nickname with the current floor price of the chosen NFT collection.
+The bot will now update the its nickname with the current floor price of the chosen NFT collection.
 
 ## Contributing
 

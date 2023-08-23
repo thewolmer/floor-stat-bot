@@ -5,10 +5,10 @@ import fetchFloorPrice from '@api/fetchFloor';
 async function updateNicknames(bot: Client) {
   try {
     const floorDetails = await fetchFloorPrice();
-    const floorEth = floorDetails.priceAmountNative;
+    const floorEth = floorDetails.stats.floor_price;
     const serverIds = process.env.SERVER_IDS!.split(',');
     bot.user?.setPresence({
-      activities: [{ name: ` #${floorDetails.tokenId} on ${floorDetails.marketplace}`, type: ActivityType.Watching }],
+      activities: [{ name: ` ${floorDetails.slug}`, type: ActivityType.Watching }],
     });
 
     for (const serverId of serverIds) {

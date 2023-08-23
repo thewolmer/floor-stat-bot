@@ -1,15 +1,23 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 
-import FloorData from '../types/Floor';
+import { Collection } from '../types/Opensea';
 
-async function fetchFloorPrice(): Promise<FloorData> {
+dotenv.config();
+const apiEndpoint = process.env.API_ENDPOINT as string;
+
+async function fetchFloorPrice(): Promise<Collection> {
   try {
-    const apiEndpoint = process.env.API_ENDPOINT!;
-    const response = await axios.get(apiEndpoint, {});
-    return response.data;
+    const response = await axios.get(apiEndpoint, {
+      headers: {
+        'X-API-KEY': process.env.API_KEY,
+      },
+    });
+    return response.data.collection;
   } catch (error) {
     console.error('An error occurred while fetching the floor price:', error);
     throw error;
   }
 }
+
 export default fetchFloorPrice;
