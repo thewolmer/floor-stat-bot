@@ -76,7 +76,7 @@ Happy NFT tracking with the NFT Floor Price Stat Bot! If you find this bot usefu
 
 This project is used by the following:
 
-- [Moonie Moo Genesis NFT](https://moonie.moo.io?utm_source=github.com/thewolmer/nft-stat-bot)
+- [Moonie Moo Genesis NFT](https://mooniemoo.io?utm_source=github.com/thewolmer/nft-stat-bot)
 - Add your Name here by creating a pull request.
 
 ## Authors
