@@ -1,12 +1,15 @@
-import { Client } from 'discord.js';
+import { ActivityType, Client } from 'discord.js';
 
-import fetchFloorPrice from '../api/fetchFloor';
+import fetchFloorPrice from '@api/fetchFloor';
 
 async function updateNicknames(bot: Client) {
   try {
     const floorDetails = await fetchFloorPrice();
     const floorEth = floorDetails.priceAmountNative;
     const serverIds = process.env.SERVER_IDS!.split(',');
+    bot.user?.setPresence({
+      activities: [{ name: ` #${floorDetails.tokenId} on ${floorDetails.marketplace}`, type: ActivityType.Watching }],
+    });
 
     for (const serverId of serverIds) {
       const guild = bot.guilds.cache.get(serverId);
